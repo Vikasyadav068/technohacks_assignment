@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+}
+
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(90, 173, 97), rgb(181, 92, 156));
+}
+
+.container {
+  height: auto;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #dfee11;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #25c7f0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.theme-toggler.active {
+  color: #11ec1c;
+}
+
+.theme-toggler.active::before {
+  background-color: #df218c;
+}
+
+.theme-toggler::before {
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #5e0c98;
+  z-index: -1;
+}
+
+#display {
+  margin: 0 10px;
+  height: 150px;
+  width: auto;
+  max-width: 270px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+  display: block;
+  height: 3px;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+button:hover {
+  transform: scale(1.20);
+  border-radius: 10px;
+
+}
+
+button#equal {
+  height: 130px;
+}
+
+/* light theme */
+
+.calculator {
+  background-color: #e54a4a;
+}
+
+.calculator #display {
+  color: #0a1e23;
+}
+
+.calculator button#clear {
+  background-color: #f6e124;
+  size: 20px;
+  color: #070001;
+}
+
+.calculator button.btn-number {
+  background-color: #2eb2f9;
+  color: #080101;
+}
+
+.calculator button.btn-operator {
+  background-color: #dc3acf;
+  color: #030003;
+}
+
+.calculator button.btn-equal {
+  background-color: #0ded0d;
+  color: #000;
+}
+
+/* dark theme */
+
+.calculator.dark {
+  background-color: #8314cd;
+}
+
+.calculator.dark #display {
+  color: #0c0c0b;
+}
+
+.calculator.dark button#clear {
+  background-color: #70d1f1;
+  color: #0e0203;
+}
+
+.calculator.dark button.btn-number {
+  background-color: #0b1cd5;
+  border-radius: 100%;
+  color: #080807;
+}
+
+.calculator.dark button.btn-operator {
+  background-color: #dcf02a;
+  border-radius: 100%;
+  color: #020202;
+}
+
+.calculator.dark button.btn-equal {
+  background-color: #0ded0d;
+  border-radius: 70px;
+  color: #050000;
+}
+
+
+.signup{
+  margin: 10px;
+  height: 40px;
+  width: 70px;
+  background-color: yellow;
+}
+
+.login_btn{
+  width: 70px;
+height: 40px;
+  background-color: red;
+}
+
+a:link { 
+  text-decoration: none; 
+  color: #080807;
+} 
+a:visited { 
+  text-decoration: none; 
+  color: #010400;
+} 
+a:hover { 
+  text-decoration: none; 
+  color: #050605;
+} 
+a:active { 
+  text-decoration: none; 
+  color: #040401;
+}
+
+.signup:hover{
+  background: #0ded0d;
+  color: black;
+  margin-left: 20px;
+  border-radius: 100%;
+}
+.login_btn:hover{
+  background: #2aeb03;
+  color: black;
+  margin-right: 10px;
+  border-radius: 100%;
+}
